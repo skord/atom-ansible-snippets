@@ -1,0 +1,108 @@
+".source.yaml":
+  "newEC2Instance":
+    "prefix": "ec2"
+    "body": """
+      ec2:
+        assign_public_ip: $1
+        group: $2
+        group_id: $3
+        image: $4
+        instance_profile_name: $5
+        instance_type: $6
+        key_name: $7
+        monitoring: $8
+        region: $9
+        state: present
+        wait: $10
+        vpc_subnet_id: $11
+        instance_tags:
+          Name: $12
+          CreatedBy: Ansible
+          $13
+        """
+  "newEC2Instances":
+    "prefix": "ec2m"
+    "body": """
+      ec2:
+        assign_public_ip: $1
+        count: $2
+        count_tag: $3
+        exact_count: $4
+        group: $5
+        group_id:
+        image:
+        instance_profile_name:
+        instance_type:
+        key_name:
+        monitoring:
+        region:
+        state:
+        wait:
+        vpc_subnet_id:
+        instance_tags:
+          Name: $12
+          CreatedBy: Ansible
+          $13
+        """
+  "newEC2Group":
+    "prefix": "ec2g"
+    "body": """
+      ec2_group:
+        name: $1
+        description: $2
+        purge_rules: yes
+        purge_rules_egress: yes
+        region: $3
+        vpc_id: $4
+        state: present
+        rules:
+          $5
+        """
+  "tcpRuleGid":
+    "prefix": "tcpgid"
+    "body": """
+      - proto: tcp
+        from_port: $1
+        to_port: $2
+        group_id: $3
+        """
+  "tcpRuleGn":
+    "prefix": "tcpgn"
+    "body": """
+      - proto: tcp
+        from_port: $1
+        to_port: $2
+        group_name: $3
+        """
+  "tcpRuleCidr":
+    "prefix": "tcpcidr"
+    "body": """
+      - proto: tcp
+        from_port: $1
+        to_port: $2
+        cidr_ip: $3
+        """
+  "udpRuleGid":
+    "prefix": "udpgid"
+    "body": """
+      - proto: udp
+        from_port: $1
+        to_port: $2
+        group_id: $3
+        """
+  "udpRuleGn":
+    "prefix": "udpgn"
+    "body": """
+      - proto: udp
+        from_port: $1
+        to_port: $2
+        group_name: $3
+        """
+  "udpRuleCidr":
+    "prefix": "udpcidr"
+    "body": """
+      - proto: udp
+        from_port: $1
+        to_port: $2
+        cidr_ip: $3
+        """

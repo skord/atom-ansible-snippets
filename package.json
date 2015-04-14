@@ -1,0 +1,16 @@
+{
+  "name": "ansible-snippets",
+  "main": "./lib/ansible-snippets",
+  "version": "0.0.1",
+  "description": "Ansible Snippets",
+  "activationCommands": {
+    "atom-workspace": "ansible-snippets:toggle"
+  },
+  "repository": "https://github.com/skord/ansible-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
