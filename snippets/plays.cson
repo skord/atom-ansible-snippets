@@ -1,0 +1,49 @@
+".source.yaml":
+  "role":
+    "prefix": "r"
+    "body": """
+    - role: $1
+    """
+  "task":
+    "prefix": "t"
+    "body": """
+    - name: $1
+    """
+  "localplaytasks":
+    "prefix": "lpt"
+    "body": """
+    - name: $1
+      connection: local
+      hosts: localhost
+      tasks:
+        $2
+    """
+  "localplayroles":
+    "prefix": "lpr"
+    "body": """
+    - name: $1
+      connection: local
+      hosts: localhost
+      roles:
+        $2
+    """
+  "remoteplaytasks":
+    "prefix": "rpt"
+    "body": """
+    - name: $1
+      hosts: $2
+      user: $3
+      sudo: $4
+      tasks:
+        $5
+    """
+  "remoteplayroles":
+    "prefix": "rpr"
+    "body": """
+    - name: $1
+      hosts: $2
+      user: $3
+      sudo: $4
+      roles:
+        $5
+    """

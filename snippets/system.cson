@@ -1,0 +1,10 @@
+".source.yaml":
+  "service":
+    "prefix": "serv"
+    "body": """
+    - name: $1
+      service:
+        name: $2
+        state: $3
+        enabled: $4
+    """

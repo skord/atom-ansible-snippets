@@ -1,0 +1,25 @@
+".source.yaml":
+  "dir":
+    "prefix": "dir"
+    "body": """
+    - name: $1
+      file:
+        path: $2
+        state: directory
+        owner: $3
+        group: $4
+        recurse: $5
+    """
+  "template":
+    "prefix": "temp"
+    "body": """
+    - name: $1
+      template:
+        src: $2
+        dest: $3
+        owner: $4
+        group: $5
+        mode: $6
+        backup: $7
+        validate: $8
+    """

@@ -1,0 +1,12 @@
+".source.yaml":
+  "getUrl":
+    "prefix": "get_url"
+    "body": """
+    - name: $1
+      get_url:
+        url: $2
+        dest: $3
+        owner: $4
+        group: $5
+        mode: $6
+    """
