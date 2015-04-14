@@ -6,7 +6,7 @@
   "activationCommands": {
     "atom-workspace": "ansible-snippets:toggle"
   },
-  "repository": "https://github.com/skord/ansible-snippets",
+  "repository": "https://github.com/skord/atom-ansible-snippets",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
