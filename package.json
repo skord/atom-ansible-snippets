@@ -1,7 +1,7 @@
 {
   "name": "ansible-snippets",
   "main": "./lib/ansible-snippets",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Ansible Snippets",
   "activationCommands": {
     "atom-workspace": "ansible-snippets:toggle"
