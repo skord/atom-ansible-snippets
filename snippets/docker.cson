@@ -1,0 +1,29 @@
+".source.yaml":
+  "docker":
+    "prefix": "temp"
+    "body": """
+    - name: $1
+      docker:
+        registry: $2
+        image: $3
+        name: $4
+        pull: always
+        net: bridge
+        ports: []
+        volumes: []
+        links: []
+        env: {}
+        state: started
+        restart_policy: always
+        restart_policy_retry: 3
+        command: $5
+    """
+  "docker_image":
+    "prefix": "temp"
+    "body": """
+    - name: $1
+      docker_image:
+        name: $2
+        state: $3
+        tag: latest
+    """
