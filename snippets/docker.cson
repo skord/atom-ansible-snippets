@@ -1,6 +1,6 @@
 ".source.yaml":
   "docker":
-    "prefix": "temp"
+    "prefix": "docker"
     "body": """
     - name: $1
       docker:
@@ -19,7 +19,7 @@
         command: $5
     """
   "docker_image":
-    "prefix": "temp"
+    "prefix": "docker_image"
     "body": """
     - name: $1
       docker_image:
