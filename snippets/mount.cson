@@ -3,10 +3,10 @@
     "prefix": "mount"
     "body": """
     - name: $1
-      file:
-        path: $2
-        state: directory
-        owner: $3
-        group: $4
-        recurse: $5
+      mount:
+        name: $2
+        src: $3
+        fstype: $4
+        opts: $4
+        state: mounted
     """
