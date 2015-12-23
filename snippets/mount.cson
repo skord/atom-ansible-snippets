@@ -1,0 +1,12 @@
+".source.yaml":
+  "mount":
+    "prefix": "mount"
+    "body": """
+    - name: $1
+      mount:
+        name: $2
+        src: $3
+        fstype: $4
+        opts: $4
+        state: mounted
+    """
