@@ -1,0 +1,12 @@
+".source.yaml":
+  "mount":
+    "prefix": "mount"
+    "body": """
+    - name: $1
+      file:
+        path: $2
+        state: directory
+        owner: $3
+        group: $4
+        recurse: $5
+    """
